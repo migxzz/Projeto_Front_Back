@@ -1,0 +1,52 @@
+    <!DOCTYPE html>
+    <html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cadastro</title>
+        <link rel="stylesheet" href="./styles/styleCadastro.css">
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <img src="./images/logoConecTsi.png" alt="Logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="/paginaPrincipal.php">Página Inicial</a></li>
+                    <li><a href="#">Vagas</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="login-container">
+            <div class="login-form">
+                <h2>Cadastro</h2>
+                <form action="processa_cadastro.php" method="POST">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required>
+
+                    <label for="sobrenome">Sobrenome:</label>
+                    <input type="text" id="sobrenome" name="sobrenome" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="data-nascimento">Data de Nascimento:</label>
+                    <input type="date" id="data-nascimento" name="data-nascimento" required>
+
+                    <label for="senha">Senha:</label>
+                    <input type="password" id="senha" name="senha" required>
+
+                    <label for="confirmar-senha">Confirmar Senha:</label>
+                    <input type="password" id="confirmar-senha" name="confirmar-senha" required>
+
+                    <button type="submit">Criar Conta</button>
+                </form>
+            </div>
+            <div class="login-image">
+                <img src="./images/StockCake-Focused Computer Work_1724279777.jpg" alt="Cadastro Image">
+            </div>
+        </div>
+    </body>
+    </html>

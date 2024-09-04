@@ -1,0 +1,257 @@
+/* Correções no CSS */
+
+/* Remova qualquer estilo que possa estar causando duplicação */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin-left: 15%;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+header .logo img {
+    height: 30px;
+    margin-left: 10%;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.content {
+    text-align: center;
+    max-width: 900px;
+    width: 100%;
+    padding: 20px;
+    margin: 100px auto 0; /* Ajuste para centralizar verticalmente */
+}
+
+.search-bar {
+    display: flex;
+    align-items: center; /* Alinha verticalmente o botão e a barra de pesquisa */
+    max-width: 600px; /* Ajuste conforme necessário */
+    margin: 0 auto; /* Centraliza horizontalmente */
+    gap: 10px; /* Espaçamento entre o campo de pesquisa e o botão */
+}
+
+.search-bar form {
+    display: flex;
+    align-items: center; /* Alinha o conteúdo do formulário (campo e botão) */
+    width: 100%; /* Faz o formulário ocupar toda a largura da .search-bar */
+}
+
+.search-bar input[type="text"] {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    width: 100%; /* Faz a barra de pesquisa ocupar o espaço disponível */
+    box-sizing: border-box; /* Garante que padding e border não afetem a largura */
+}
+
+.search-bar button {
+    padding: 12px 20px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    width: 100px; /* Ajuste conforme necessário */
+    box-sizing: border-box; /* Garante que padding e border não afetem a largura */
+}
+
+.search-bar button:hover {
+    background-color: #333;
+}
+
+.vagas-section {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.vagas-section h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.vaga-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    transition: box-shadow 0.3s, transform 0.3s;
+    min-height: 150px;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.vaga-card:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+.short-description {
+    margin-bottom: 15px;
+}
+
+.full-description {
+    margin-top: 15px;
+    color: #555;
+    display: none;
+}
+
+.toggle-details-btn {
+    background-color: #000;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: background-color 0.3s;
+    display: block;
+    margin: 15px auto;
+}
+
+.toggle-details-btn:hover {
+    background-color: #333;
+}
+
+button {
+    padding: 12px 20px;
+    border: none;
+    background-color: #000;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+    margin-top: 30px;
+}
+
+button:hover {
+    background-color: #333;
+}
+
+.buscar {
+    margin-bottom: 5%;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header {
+        margin-left: 0;
+        padding: 15px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header .logo {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 10px;
+        margin: 0;
+        padding: 0; /* Remove padding para ajustar o layout */
+    }
+
+    header nav ul li {
+        text-align: center;
+        padding: 0; /* Remove padding para ajustar o layout */
+    }
+
+    header nav ul li a {
+        font-size: 14px;
+    }
+
+    .search-bar {
+        max-width: 100%;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .search-bar input[type="text"] {
+        width: 100%;
+    }
+
+    .search-bar button {
+        width: 100%;
+    }
+
+    .content {
+        margin-top: 80px; /* Ajuste para centralizar verticalmente após ajustes no header */
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 10px;
+    }
+
+    header nav ul {
+        gap: 5px;
+    }
+
+    header nav ul li a {
+        font-size: 12px;
+    }
+
+    .search-bar {
+        gap: 5px;
+    }
+
+    .search-bar button {
+        width: 100%;
+    }
+
+    .vaga-card {
+        padding: 15px;
+    }
+
+    .vaga-card h3 {
+        font-size: 20px;
+    }
+
+    .vaga-card p {
+        font-size: 14px;
+    }
+
+    .content {
+        margin-top: 60px; /* Ajuste para centralizar verticalmente após ajustes no header */
+    }
+}

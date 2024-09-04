@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ConecTsi - Login</title>
+    <link rel="stylesheet" href="styles/styleIndex.css">
+    <script src="./src/login.js" defer></script> 
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="./images/logoConecTsi.png" alt="Logo ConecTsi">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/paginaPrincipal.php">Página Inicial</a></li>
+                <li><a href="#">Vagas</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main class="login-container">
+        <div class="login-form">
+            <h2>Bem vindo de volta!</h2>
+            <p>Já tem uma conta? Faça login!</p>
+            <form id="login-form" action="processa_login.php" method="POST">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="seuemail@gmail.com" required>
+                
+                <label for="password">Senha</label>
+                <input type="password" id="password" name="senha" placeholder="sua senha" required>
+                
+                <a href="#" class="forgot-password">Esqueceu a senha?</a>
+                
+                <button type="submit">Entrar</button>
+            </form>
+            
+            <div class="social-login">
+                <p>Ou</p>
+                <button class="google-login">
+                    <img src="./images/google.png"> Login com Google</button>
+                <button class="facebook-login">
+                    <img src="./images/facebook.png"> Login com Facebook</button>
+            </div>
+            
+            <p class="signup-link">Não tem uma conta? <a href="./cadastro.html">Cadastre-se</a></p>
+        </div>
+        <div class="login-image">
+            <img src="./images/StockCake-Focused Computer Work_1724279777.jpg" alt="Mulher no computador">
+        </div>
+    </main>
+</body>
+</html>
