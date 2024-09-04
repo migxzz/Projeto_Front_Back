@@ -20,7 +20,7 @@ $stmt->execute();
 $usuario = $stmt->fetch(PDO::FETCH_ASSOC);
 
 // Consultar vagas favoritas
-$query = "SELECT vagas.titulo, vagas.descricao FROM vagas
+$query = "SELECT vagas.id, vagas.titulo, vagas.descricao FROM vagas
           INNER JOIN aplicacoes_favoritas ON vagas.id = aplicacoes_favoritas.vaga_id
           WHERE aplicacoes_favoritas.usuario_id = :usuario_id";
 $stmt = $db->prepare($query);
@@ -62,18 +62,21 @@ $vagasFavoritas = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
         <h3>Vagas Favoritas</h3>
         <ul>
-    <?php if (count($vagasFavoritas) > 0): ?>
-        <?php foreach ($vagasFavoritas as $vaga): ?>
-            <li class="vaga-favorita">
-                <h4><?php echo htmlspecialchars($vaga['titulo']); ?></h4>
-                <p><?php echo htmlspecialchars(substr($vaga['descricao'], 0, 100)) . '...'; ?></p>
-            </li>
-        <?php endforeach; ?>
-    <?php else: ?>
-        <p>Você ainda não tem vagas favoritas.</p>
-    <?php endif; ?>
-</ul>
-
+            <?php if (count($vagasFavoritas) > 0): ?>
+                <?php foreach ($vagasFavoritas as $vaga): ?>
+                    <li class="vaga-favorita">
+                        <h4>
+                            <a href="vagaDetalhes.php?id=<?php echo htmlspecialchars($vaga['id']); ?>">
+                                <?php echo htmlspecialchars($vaga['titulo']); ?>
+                            </a>
+                        </h4>
+                        <p><?php echo htmlspecialchars(substr($vaga['descricao'], 0, 100)) . '...'; ?></p>
+                    </li>
+                <?php endforeach; ?>
+            <?php else: ?>
+                <p>Você ainda não tem vagas favoritas.</p>
+            <?php endif; ?>
+        </ul>
 
         <h3>Localização Atual</h3>
         <p id="location">Obtendo localização...</p>
