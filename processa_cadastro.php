@@ -34,9 +34,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Tenta criar o usuário
     if($user->create()) {
-        echo "Usuário cadastrado com sucesso! <a href='index.html'>Faça login</a>";
+        echo "<script>
+                alert('Usuário cadastrado com sucesso!');
+                window.location.href = 'index.html';
+              </script>";
     } else {
-        echo "Erro ao cadastrar o usuário.";
+        echo "<script>
+                alert('Erro ao cadastrar o usuário.');
+                window.history.back();
+              </script>";
     }
 }
 ?>
