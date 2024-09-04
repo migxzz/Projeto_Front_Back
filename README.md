@@ -1,16 +1,24 @@
-# Projeto_Front_Back
-
 # ConecTsi
 
-## Descrição
+## 2.2 Documento Descritivo do Projeto
 
-O ConecTsi é um aplicativo de vagas que permite aos usuários buscar e se candidatar a vagas de emprego. O aplicativo possui uma interface intuitiva, com funcionalidades de pesquisa e exibição de vagas, além de um design responsivo para garantir uma experiência de usuário otimizada em diferentes dispositivos.
+### Motivações e Objetivo
 
-## Funcionalidades
+O ConecTsi foi desenvolvido para facilitar a busca para vagas de emprego, oferecendo uma plataforma intuitiva e acessível. A aplicação visa resolver o problema da dificuldade em encontrar vagas relevantes e adaptar a experiência do usuário a diferentes dispositivos, melhorando a eficiência na procura de emprego.
 
-- **Pesquisa de Vagas:** Permite pesquisar vagas de emprego com base em palavras-chave.
+### Público-alvo
+
+O público-alvo do ConecTsi inclui:
+- **Profissionais em busca de novas oportunidades de emprego.**
+- **Estudantes em busca de estágios ou programas de trainee.**
+- **Recrutadores e empresas à procura de candidatos para suas vagas.**
+
+### Funcionalidades Principais
+
+- **Pesquisa de Vagas:** Permite aos usuários buscar vagas de emprego com base em palavras-chave.
 - **Exibição de Vagas:** Mostra uma lista de vagas com a possibilidade de ver mais detalhes.
-- **Responsividade:** Design adaptável para dispositivos móveis e desktops.
+- **Responsividade:** Design adaptável para garantir uma experiência otimizada em dispositivos móveis e desktops.
+- **Feedback Interativo:** Fornecimento de feedback claro sobre as ações do usuário e validação de formulários para uma melhor experiência.
 
 ## Tecnologias Utilizadas
 
@@ -86,4 +94,6 @@ Contribuições são bem-vindas! Siga os passos abaixo para contribuir:
 
 Este projeto está licenciado sob a [MIT License](LICENSE).
 
+## Contato
 
+Para mais informações, entre em contato com [seu-email@example.com](mailto:seu-email@example.com).
