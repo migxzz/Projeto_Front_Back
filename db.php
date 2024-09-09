@@ -15,6 +15,6 @@ class Database {
             echo "Connection error: " . $exception->getMessage();
         }
         return $this->conn;
-    }
+    } //Essa função tenta se conectar a um banco de dados MySQL usando as credenciais fornecidas e retorna a conexão. Se houver um erro, ele captura a exceção e exibe a mensagem de erro correspondente.
 }
 ?>

@@ -23,21 +23,12 @@ if ($vaga_id === false) {
     exit();
 }
 
-// Verificar se a vaga já foi favoritada
-$query = "SELECT * FROM aplicacoes_favoritas WHERE usuario_id = :usuario_id AND vaga_id = :vaga_id";
+// Remover a vaga dos favoritos
+$query = "DELETE FROM aplicacoes_favoritas WHERE usuario_id = :usuario_id AND vaga_id = :vaga_id";
 $stmt = $db->prepare($query);
 $stmt->bindParam(':usuario_id', $usuario_id, PDO::PARAM_INT);
 $stmt->bindParam(':vaga_id', $vaga_id, PDO::PARAM_INT);
 $stmt->execute();
-
-if ($stmt->rowCount() == 0) {
-    // Inserir a vaga como favorita
-    $query = "INSERT INTO aplicacoes_favoritas (usuario_id, vaga_id, data_favorito) VALUES (:usuario_id, :vaga_id, NOW())";
-    $stmt = $db->prepare($query);
-    $stmt->bindParam(':usuario_id', $usuario_id, PDO::PARAM_INT);
-    $stmt->bindParam(':vaga_id', $vaga_id, PDO::PARAM_INT);
-    $stmt->execute();
-}
 
 // Redirecionar para o perfil do usuário
 header('Location: perfil.php');
