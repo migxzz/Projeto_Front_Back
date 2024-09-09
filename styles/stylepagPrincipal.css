@@ -169,6 +169,23 @@ button:hover {
     margin-bottom: 5%;
 }
 
+/* Botões de edição e exclusão */
+.btn.editar-btn {
+    background-color: #007bff;
+}
+
+.btn.editar-btn:hover {
+    background-color: #0056b3;
+}
+
+.btn.excluir-btn {
+    background-color: #dc3545;
+}
+
+.btn.excluir-btn:hover {
+    background-color: #c82333;
+}
+
 /* Responsividade */
 @media (max-width: 768px) {
     header {

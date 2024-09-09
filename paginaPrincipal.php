@@ -71,6 +71,9 @@ $vagas = $stmt->fetchAll(PDO::FETCH_ASSOC);
                         <p class="full-description"><?php echo htmlspecialchars($vaga['descricao']); ?></p>
                         <button class="toggle-details-btn">Ver Mais</button>
                         <a href="vagaDetalhes.php?id=<?php echo $vaga['id']; ?>" class="btn">Ver Detalhes</a>
+                        <!-- Adicionar botão de edição e exclusão -->
+                        <a href="editarVaga.php?id=<?php echo $vaga['id']; ?>" class="btn editar-btn">Editar</a>
+                        <a href="excluirVaga.php?id=<?php echo $vaga['id']; ?>" class="btn excluir-btn">Excluir</a>
                     </div>
                 <?php endforeach; ?>
             <?php else: ?>
